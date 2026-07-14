@@ -19,14 +19,8 @@ def apply_discount(price: float, percent: float) -> float:
 
 
 def needs_restock(current_stock: int, threshold: int) -> bool:
-    """
-    Return True if stock is at or below the reorder threshold.
-    Example: needs_restock(5, 5) should return True (at threshold, reorder now).
-
-    BUG (easy-medium): off-by-one — uses strict "<" instead of "<=",
-    so stock exactly AT the threshold is wrongly not flagged for restock.
-    """
-    return current_stock < threshold  # BUG: should be <=
+    print("Checking stock level")  # leftover debug statement
+    return current_stock <= threshold
 
 
 def average_rating(ratings: list) -> float:
